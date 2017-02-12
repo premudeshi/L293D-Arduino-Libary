@@ -1,10 +1,18 @@
+/*
+  MotrorIC.h - Library for using the L293D Motor IC with Arduino. This is the software part. 
+  Hardware can be found on our website : arduinocracker.uphero.com
+  Created by Prem P. Udeshi Febuary 12, 2017.
+  Released into the public domain.
+*/
+
+
 #ifndef MotorIC_h
 #define MotorIC_h
 
 #include "Arduino.h"
 
 
-class Motor_IC
+class MotorIC
 {
   public:
     Motor1A(int pin1);
@@ -13,6 +21,7 @@ class Motor_IC
     Motor2B(int pin4);
     void drive();
     void reverse();
+    void stop();
   private:
     int _pin1;
     int _pin2;
